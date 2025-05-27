@@ -1,0 +1,41 @@
+1. Explain what is meant by NoSQL using the understanding that you know!
+Answer: Unlike SQL, NoSQL databases do not employ relational table structures. 
+Flexible data types, including documents, key-value, graphs, and wide-columns, are supported by NoSQL.
+Large-scale, adaptable, and quick, NoSQL is ideal for unstructured or semi-structured data.
+
+2. Explain when to use NoSQL and Relational Database Management System!
+Answer:
+NoSQL:
+- More suitable when dealing with data that does not have a fixed schema.
+- Ideal for use in large-scale and real-time applications due to high performance and support horizontal scalability.
+- Less suitable for complex transaction needs or relationships between tables.
+
+RDMS:
+- Very appropriate when handling structured and consistent data
+- Suitable when there are complex relationships between data and when support is needed for strong SQL 
+
+3. Mention examples of 2 NoSQL tools/platforms other than ElasticSearch along with the advantages of the tools/platforms!
+Answer:
+1. MongoDB: a NoSQL document-oriented database that uses the JSON-like (BSON) format to store data.
+For managing semi-structured data, such as user log data, dynamic forms, or data from online and mobile applications with often changing formats,
+this database is ideal.
+
+2. Redis: NoSQL databases of the Key-Value Store type operate in-memory, which means that all data is kept and retrieved straight from RAM rather than the disk.
+Redis is regarded as one of the quickest databases because of this, making it perfect for applications requiring high speed, like real-time analytics,
+session management, message queues, caching, and game leaderboards.
+
+4. Explain what you know from Airflow using your own understanding and language!
+Answer: One tool for overseeing data automation processes is Apache Airflow.
+With Airflow, we can use DAGs (Directed Acyclic Graphs) to design scheduled processes like extract-transform-load (ETL), model training, data validation, etc.
+Airflow is capable of managing task dependencies, scheduling, and monitoring.
+
+5. Explain what you know from Great Expectations using your own understanding and language!
+Answer: A Python package called Great Expectations is used for automatic data validation.
+It helps guarantee that data entering the system satisfies quality criteria, such as appropriate ranges, matching data types, and no nulls.
+
+6. Explain what you know from Batch Processing using your own understanding and language (Definition, Use Case Examples, Tools, etc.)!
+Answer: Batch processing is a technique for processing huge amounts of data on a regular basis.
+Data is first gathered, and at a specific moment, it is all analyzed at once.
+
+Example case: Cleaning and loading daily data into the warehouse and payroll process at the end of each month.
+Tools: Apache Airflow

@@ -1,0 +1,44 @@
+===========================================
+PREFACE
+===========================================
+This program is aims to create tables and insert the dataset into a PostgreSQL database.
+
+
+===========================================
+URL DATASET
+===========================================
+Dataset URL: https://www.kaggle.com/datasets/valakhorasani/mobile-device-usage-and-user-behavior-dataset/data
+
+===========================================
+Data Definition Language Syntax
+===========================================
+Defines the structure of the `table_m3`, specifying columns, data types, and constraints using `CREATE TABLE`.
+
+CREATE TABLE table_m3 (
+    "User ID" INT PRIMARY KEY,
+    "Device Model" VARCHAR(100),
+    "Operating System" VARCHAR(100),
+    "App Usage Time (min/day)" INT,
+    "Screen On Time (hours/day)" FLOAT,
+    "Battery Drain (mAh/day)" INT, 
+    "Number of Apps Installed" INT,
+    "Data Usage (MB/day)" INT,
+    "Age" INT,
+    "Gender" VARCHAR(10),
+    "User Behavior Class" INT
+);
+
+===========================================
+Data Manipulation Language Syntax
+===========================================
+Inserts data from a CSV file into the `table_m3` using `COPY`.
+
+COPY table_m3("User ID", "Device Model", "Operating System", "App Usage Time (min/day)",
+                "Screen On Time (hours/day)", "Battery Drain (mAh/day)", "Number of Apps Installed",
+                "Data Usage (MB/day)", "Age", "Gender", "User Behavior Class")
+FROM '/data/data_raw.csv'
+WITH (
+    FORMAT csv,
+    HEADER true,
+    DELIMITER ','
+);
